@@ -28,7 +28,27 @@
   --spacing-24: 6rem;
   --spacing-32: 8rem;
 
-  --color-primary: #005b99;
+  --fontWeight-normal: 400;
+  --fontWeight-medium: 500;
+  --fontWeight-semibold: 600;
+  --fontWeight-bold: 700;
+  --fontWeight-extrabold: 800;
+  --fontWeight-black: 900;
+  --fontSize-root: 16px;
+  --lineHeight-none: 1;
+  --lineHeight-tight: 1.1;
+  --lineHeight-normal: 1.5;
+  --lineHeight-relaxed: 1.625;
+  /* 1.200 Minor Third Type Scale */
+  --fontSize-0: 0.833rem;
+  --fontSize-1: 1rem;
+  --fontSize-2: 1.05rem;
+  --fontSize-3: 1.1rem;
+  --fontSize-4: 1.3rem;
+  --fontSize-5: 1.6rem;
+  --fontSize-6: 1.8rem;
+  --fontSize-7: 2.0rem;
+  --color-primary: #196b59;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -127,7 +147,7 @@ h3 > a,
 h4 > a,
 h5 > a,
 h6 > a {
-  text-decoration: none;
+  text-decoration: underline;
   color: inherit;
 }
 
@@ -205,6 +225,7 @@ table thead tr th {
 
 a {
   color: var(--color-primary);
+  text-decoration: underline;
 }
 
 a:hover,

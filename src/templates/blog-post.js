@@ -15,12 +15,15 @@ const BlogPostTemplate = ({ data, location }) => {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        image={"../../content/blog"+location.pathname+post.frontmatter.ogimage}
       />
       <article
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
       >
+                
+
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
@@ -85,6 +88,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        ogimage
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

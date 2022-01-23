@@ -6,7 +6,7 @@ module.exports = {
       summary: "",
     },
     description: `日辻がやったことなどを書くブログ`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://mrkm.netlify.app`,
     social: {
       twitter: `loveandsheep145`,
     },

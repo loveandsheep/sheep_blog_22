@@ -17,7 +17,7 @@ const BlogPostTemplate = ({ data, location }) => {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        image={data.allFile.nodes[0].childImageSharp.original.src}
+        image={data.site.siteMetadata.siteUrl + data.allFile.nodes[0].childImageSharp.original.src}
       />
       
       <article
@@ -80,6 +80,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     markdownRemark(id: { eq: $id }) {

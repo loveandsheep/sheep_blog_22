@@ -105,7 +105,7 @@ module.exports = {
                     frontmatter {
                       title
                       date
-                      ogimage
+                      image
                     }
                   }
                 }

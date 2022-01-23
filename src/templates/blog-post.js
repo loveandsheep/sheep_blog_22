@@ -10,20 +10,21 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
+  console.log(data);
+
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        image={"../../content/blog"+location.pathname+post.frontmatter.ogimage}
+        image={data.allFile.nodes[0].childImageSharp.original.src}
       />
+      
       <article
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
       >
-                
-
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
@@ -74,6 +75,7 @@ export const pageQuery = graphql`
     $id: String!
     $previousPostId: String
     $nextPostId: String
+    $image: String
   ) {
     site {
       siteMetadata {
@@ -88,7 +90,17 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        ogimage
+        image
+      }
+    }
+    allFile (filter:{ relativePath: {eq: $image} }) {
+      nodes {
+        childImageSharp {
+          original {
+            src
+          }
+          id
+        }  
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
@@ -107,5 +119,6 @@ export const pageQuery = graphql`
         title
       }
     }
+
   }
 `

@@ -21,7 +21,7 @@ const BlogPostTemplate = ({ data, location }) => {
       />
       
       <article
-        className="blog-post"
+         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
       >

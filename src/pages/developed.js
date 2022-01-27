@@ -17,7 +17,7 @@ const Mechatronics = ({data, location}) => {
         {/* <Bio /> */}
         <Menu />
             <div>
-                機械設計についてなど
+                仕事や趣味で作ったもの
                 <CategoryTemplate posts={data.allMarkdownRemark.nodes}/>
             </div>
     </Layout>
@@ -35,7 +35,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: {frontmatter: {tags: {in: "Mechatronics"}}}
+        filter: {frontmatter: {tags: {in: "Developed"}}}
         ) {
         nodes {
         excerpt

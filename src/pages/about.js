@@ -15,7 +15,7 @@ const About = ({data, location}) => {
       {/* <Bio /> */}
       <Menu />
         <div>
-            Aboutページやで
+            日辻が開発したこと、覚えておきたい事などを書くブログです。
         </div>
     </Layout>
   )

@@ -31,7 +31,7 @@ const BlogIndex = ({ data, location }) => {
       
       {/* <Bio /> */}
       <Menu />
-
+      <div>最近の投稿…</div>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug

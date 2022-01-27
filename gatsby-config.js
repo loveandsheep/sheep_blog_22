@@ -106,6 +106,7 @@ module.exports = {
                       title
                       date
                       image
+                      tags
                     }
                   }
                 }

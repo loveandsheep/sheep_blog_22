@@ -11,11 +11,11 @@ const Menu = () => {
     return(
         <div style={divStyle}>
             <Link to='/about'><h4>About</h4></Link>
-            <Link to='/developed'><h4>Developed</h4></Link>
+            {/* <Link to='/developed'><h4>Developed</h4></Link> */}
             <Link to='/mechatronics'><h4>Mechatronics</h4></Link>
-            <h4>Houdini</h4>
+            {/* <h4>Houdini</h4>
             <h4>React</h4>
-            <h4>Others</h4>
+            <h4>Others</h4> */}
         </div>
     )
 }

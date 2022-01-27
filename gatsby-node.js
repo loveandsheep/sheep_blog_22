@@ -57,6 +57,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           previousPostId,
           nextPostId,
           image,
+          tags,
         },
       })
     })
@@ -112,6 +113,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       date: Date @dateformat
       image: String
+      tags: Array
     }
 
     type Fields {

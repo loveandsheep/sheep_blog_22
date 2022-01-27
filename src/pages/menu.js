@@ -10,10 +10,12 @@ const Menu = () => {
     }
     return(
         <div style={divStyle}>
-            <h4>about</h4>
-            <h4>blog</h4>
-            <h4>make</h4>
-            <h4>contact</h4>
+            <Link to='/about'><h4>About</h4></Link>
+            <h4>Developed</h4>
+            <Link to='/mechatronics'><h4>Mechatronics</h4></Link>
+            <h4>Houdini</h4>
+            <h4>React</h4>
+            <h4>Others</h4>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 ---
-title: NotionやinkdropでmermaidのGantt表記が小さかったので、フォントサイズを変更する
+title: Notionやinkdropでmermaidのガントチャートが小さかったので、フォントサイズを変更する
 date: "2022-01-29T20:58:06+0900"
 image: "220129_inkdrop_mermaid/2022-01-29-21-45-00.png"
 tags: ["Software", "JS/TS"] 

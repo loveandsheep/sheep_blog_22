@@ -9,15 +9,17 @@ import Menu from './menu'
 const About = ({data, location}) => {
 
   return (
+    <>
+    <Menu />
     <Layout location={location} title='むらくも'>
       <Seo title="むらくも" />
       
       {/* <Bio /> */}
-      <Menu />
         <div>
             日辻が開発したこと、覚えておきたい事などを書くブログです。
         </div>
     </Layout>
+    </>
   )
 }
 

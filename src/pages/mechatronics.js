@@ -10,17 +10,19 @@ import CategoryTemplate from "../components/categoryTemplate"
 const Mechatronics = ({data, location}) => {
 
 
-  return (
-    <Layout location={location} title='むらくも'>
-        <Seo title="むらくも" />
-        
-        {/* <Bio /> */}
+    return (
+    <>
         <Menu />
-            <div>
-                機械設計についてなど
-                <CategoryTemplate posts={data.allMarkdownRemark.nodes}/>
-            </div>
-    </Layout>
+        <Layout location={location} title='むらくも'>
+            <Seo title="むらくも" />
+            
+            {/* <Bio /> */}
+                <div>
+                    機械設計についてなど
+                    <CategoryTemplate posts={data.allMarkdownRemark.nodes}/>
+                </div>
+        </Layout>
+    </>
     )
 }
 

@@ -11,16 +11,18 @@ const Mechatronics = ({data, location}) => {
 
 
   return (
+    <>
+    <Menu />
     <Layout location={location} title='むらくも'>
         <Seo title="むらくも" />
         
         {/* <Bio /> */}
-        <Menu />
             <div>
                 仕事や趣味で作ったもの
                 <CategoryTemplate posts={data.allMarkdownRemark.nodes}/>
             </div>
     </Layout>
+    </>
     )
 }
 

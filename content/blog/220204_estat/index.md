@@ -2,6 +2,7 @@
 title: 政府統計のAPI「e-Stat」を使ってみる
 date: "2022-02-04T20:50:26+0900"
 image: "220204_estat/2022-02-04-21-38-01.png"
+thumbnail: "2022-02-04-21-38-01.png"
 tags: ["JS/TS"]
 ---
 

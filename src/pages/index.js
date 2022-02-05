@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Menu from './menu'
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -37,12 +37,12 @@ const BlogIndex = ({ data, location }) => {
         <ol style={{ listStyle: `none` }}>
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug
+            const thumbImage = post.frontmatter.thumbnail?.childImageSharp.gatsbyImageData;//getImage(post.frontmatter.thumbnail);
             return (
               <li key={post.fields.slug}>
-              　  <StaticImage
-                  formats={["auto", "webp", "avif"]}
-                  src= {post.frontmatter.image}
-                />
+                <Link to={post.fields.slug} itemProp="url">
+                <GatsbyImage image={thumbImage} />
+                </Link>
                 <article
                   className="post-list-item"
                   itemScope
@@ -81,6 +81,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -94,6 +95,11 @@ export const pageQuery = graphql`
           title
           description
           image
+          thumbnail {
+            childImageSharp {
+              gatsbyImageData(height: 100, layout: FULL_WIDTH, formats: [AUTO, WEBP, AVIF])
+            }
+          }
         }
       }
     }

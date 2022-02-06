@@ -147,7 +147,7 @@ h3 > a,
 h4 > a,
 h5 > a,
 h6 > a {
-  text-decoration: underline;
+  text-decoration: none;
   color: inherit;
 }
 

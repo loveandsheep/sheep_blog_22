@@ -2,6 +2,7 @@
 title: React+Firebaseで超ローカル立て替えアプリを作る
 date: "2022-01-27T23:03:29+0900"
 image: "220127_familyTool/thumb.png"
+thumbnail: "thumb.png"
 tags: ["Software", "React", "Developed"]
 ---
 

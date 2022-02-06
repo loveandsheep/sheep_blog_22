@@ -35,7 +35,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: {frontmatter: {tags: {in: "React"}}}
+        filter: {frontmatter: {tags: {in: "muReact"}}}
         ) {
         nodes {
         excerpt
@@ -47,7 +47,12 @@ export const pageQuery = graphql`
             title
             description
             image
-        }
+            thumbnail {
+                childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, formats: [AUTO, WEBP, AVIF])
+                }
+            }
+            }
         }
     }
     }

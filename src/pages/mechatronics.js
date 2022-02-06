@@ -49,7 +49,12 @@ export const pageQuery = graphql`
             title
             description
             image
-        }
+            thumbnail {
+                childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, formats: [AUTO, WEBP, AVIF])
+                }
+            }
+            }
         }
     }
     }

@@ -1,7 +1,7 @@
 ---
 title: 自作キーボードcocot46を組み立てました
 date: "2022-02-07T20:37:57+0900"
-image: "220207_cocot46/2022-02-07-20-38-48.png"
+image: "220207_cocot46/2022-02-07-20-47-07.png"
 thumbnail: "2022-02-07-20-47-07.png"
 tags: ["Hardware", "Keyboard", ]
 ---

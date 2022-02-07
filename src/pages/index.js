@@ -53,7 +53,7 @@ const BlogIndex = ({ data, location }) => {
                           <span itemProp="headline">{title}</span>
                         </Link>
                       </h3>
-                      <div style={{maxHeight: '120px', overflow: 'hidden', borderRadius: '5px'}}>
+                      <div style={{maxHeight: '15ewwwe0px', overflow: 'hidden', borderRadius: '5px'}}>
                         <Link to={post.fields.slug} itemProp="url">
                         <GatsbyImage image={thumbImage} />
                         </Link>

@@ -1,8 +1,7 @@
 ---
 title: トレード 02/10(-9030)
 date: "2022-02-10T10:14:31+0900"
-image: "../images/icon.png"
-thumbnail: "2202-02-10-12-10.png"
+thumbnail: "2022-02-10-10-12-20.png"
 tags: ["trade"]
 ---
 

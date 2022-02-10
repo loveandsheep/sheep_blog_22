@@ -12,11 +12,19 @@ const BlogPostTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-        image={data.site.siteMetadata.siteUrl + data.allFile.nodes[0].childImageSharp.original.src}
-      />
+      {data.allFile.nodes.length > 0 ? 
+        <Seo
+          title={post.frontmatter.title}
+          description={post.frontmatter.description || post.excerpt}
+          image={data.site.siteMetadata.siteUrl + data.allFile.nodes[0].childImageSharp.original.src}
+        />
+        :
+        <Seo
+          title={post.frontmatter.title}
+          description={post.frontmatter.description || post.excerpt}
+        />
+        }
+
       
       <article
          className="blog-post"

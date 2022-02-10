@@ -38,6 +38,10 @@ const BlogIndex = ({ data, location }) => {
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug
             const thumbImage = post.frontmatter.thumbnail?.childImageSharp.gatsbyImageData;//getImage(post.frontmatter.thumbnail);
+
+            //トレード記録はないしょ
+            if (post.frontmatter.tags[0] == 'trade') return(<></>);
+
             return (
               <div>
                 <li key={post.fields.slug}>
@@ -53,7 +57,7 @@ const BlogIndex = ({ data, location }) => {
                           <span itemProp="headline">{title}</span>
                         </Link>
                       </h3>
-                      <div style={{maxHeight: '15ewwwe0px', overflow: 'hidden', borderRadius: '5px'}}>
+                      <div style={{maxHeight: '150px', overflow: 'hidden', borderRadius: '5px'}}>
                         <Link to={post.fields.slug} itemProp="url">
                         <GatsbyImage image={thumbImage} />
                         </Link>
@@ -101,6 +105,7 @@ export const pageQuery = graphql`
           title
           description
           image
+          tags
           thumbnail {
             childImageSharp {
               gatsbyImageData(layout: CONSTRAINED, formats: [AUTO, WEBP, AVIF])

@@ -41,6 +41,7 @@ const BlogIndex = ({ data, location }) => {
 
             //トレード記録はないしょ
             if (post.frontmatter.tags[0] == 'trade') return(<></>);
+            if (post.frontmatter.tags[0] == 'Draft') return(<></>);
 
             return (
               <div>

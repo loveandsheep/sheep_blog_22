@@ -1,5 +1,5 @@
 ---
-title: imguiで日本語を扱えるようにする(Windows)
+title: ofxImGuiで日本語を扱えるようにする(Windows)
 date: "2022-02-25T19:50:09+0900"
 image: "220225_imgui_japanese/2022-02-25-21-48-06.png"
 thumbnail: "2022-02-25-21-48-06.png"

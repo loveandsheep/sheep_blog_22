@@ -15,7 +15,7 @@ $MDFILE = $DIRNAME + "/index.md"
 Copy-Item "content/template/index.md" $MDFILE
 
 $fileContent = $(Get-Content -Encoding UTF8 $MDFILE) -replace "date:", $("date: `"" + $BLOGTIME + "`"")
-$fileContent > $($MDFILE)
+$fileContent | Out-File $($MDFILE) -Encoding utf8
 
-$fileContent = $(Get-Content -Encoding UTF8 $MDFILE) -replace "image:", $("image: `"" + $DIRNAME + "/image.png`"")
-$fileContent > $($MDFILE)
+$fileContent = $(Get-Content -Encoding UTF8 $MDFILE) -replace "image:", $("image: `"" + $TODAY + $Args[0] + "/image.png`"")
+$fileContent | Out-File $($MDFILE) -Encoding utf8

@@ -1,7 +1,7 @@
 ﻿---
 title: PowerShellでGatsby用の記事テンプレートを作成する
 date: "2022-02-27T21:33:53+09"
-image: "220227_powershell_blog/image.png"
+image: "noThumb.jpg"
 thumbnail: "../noThumb.jpg"
 tags: ["Software"]
 ---

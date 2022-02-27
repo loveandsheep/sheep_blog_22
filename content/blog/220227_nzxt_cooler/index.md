@@ -1,7 +1,7 @@
 ﻿---
 title: NZXT  H1の水冷が蒸発しちゃったかも
 date: "2022-02-27T12:07:39+0900"
-image: "content/blog/220227_nzxt_cooler/2022-02-27-12-19-22.png"
+image: "220227_nzxt_cooler/2022-02-27-12-19-22.png"
 thumbnail: "2022-02-27-12-19-22.png"
 tags: ["openFrameworks"]
 ---

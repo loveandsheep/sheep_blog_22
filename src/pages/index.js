@@ -40,8 +40,15 @@ const BlogIndex = ({ data, location }) => {
             const thumbImage = post.frontmatter.thumbnail?.childImageSharp.gatsbyImageData;//getImage(post.frontmatter.thumbnail);
 
             //トレード記録はないしょ
-            if (post.frontmatter.tags[0] == 'trade') return(<></>);
-            if (post.frontmatter.tags[0] == 'Draft') return(<></>);
+            if (post.frontmatter.tags === null)
+            {
+              return(<>{post.fields.slug}</>);
+            }
+            else
+            {
+              if (post.frontmatter.tags[0] == 'trade') return(<></>);
+              if (post.frontmatter.tags[0] == 'Draft') return(<></>);  
+            }
 
             return (
               <div>

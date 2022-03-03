@@ -6,9 +6,15 @@ const Layout = ({ location, title, children }) => {
   const isRootPath = location.pathname === rootPath
   let header
 
+  const style_main = {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    flexDirection: 'row',
+  }
+
   if (isRootPath) {
     header = (
-      <h3 style={{textDecoration: 'none'}}>
+      <h3 style={{marginTop: '0px', textDecoration: 'none'}}>
         <Link to="/">{title}</Link>
       </h3>
     )
@@ -24,8 +30,19 @@ const Layout = ({ location, title, children }) => {
 //  :: {location.pathname}
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
-      <main>{children}</main>
+      <main style={style_main}>
+        <div className="contents-left">
+        <header className="global-header">{header}</header>
+          ここにサイドメニュー的な何か
+        </div>
+        <div className="contents-main">
+      
+          {children}
+        </div>
+        <div className="contents-left">
+          
+        </div>
+      </main>
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}

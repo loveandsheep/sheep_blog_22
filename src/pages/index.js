@@ -31,7 +31,6 @@ const BlogIndex = ({ data, location }) => {
       <Menu />
       <Layout location={location} title={siteTitle}>
       <Seo title="むらくも" />
-        
         {/* <Bio /> */}
         <div>最近の投稿⬇️</div>
         <ol style={{ listStyle: `none` }}>

@@ -246,6 +246,7 @@ a:focus {
 }
 
 .contents-left {
+  min-width: 15rem;
   max-width: var(--maxWidth-sm);
 }
 

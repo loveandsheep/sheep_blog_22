@@ -39,7 +39,7 @@ const Layout = ({ location, title, children }) => {
       
           {children}
         </div>
-        <div className="contents-left">
+        <div className="contents-right">
           
         </div>
       </main>

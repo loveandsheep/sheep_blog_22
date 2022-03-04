@@ -9,7 +9,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  let posts = (data.allMarkdownRemark.nodes).slice(0, 5);
 
   if (posts.length === 0) {
     return (
@@ -101,7 +101,7 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(filter: {frontmatter: {tags: {nin: "trade"}}}, sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         excerpt
         fields {

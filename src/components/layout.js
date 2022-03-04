@@ -1,11 +1,24 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
 
+  const tagList = useStaticQuery(graphql`
+  {
+    allMarkdownRemark {
+      group(field: frontmatter___tags) {
+        tag: fieldValue
+        totalCount
+      }
+    }
+  }`
+  )
+
+  console.log(tagList);
+  
   const style_main = {
     display: 'flex',
     justifyContent: 'space-evenly',
@@ -33,7 +46,13 @@ const Layout = ({ location, title, children }) => {
       <main style={style_main}>
         <div className="contents-left">
         <header className="global-header">{header}</header>
-          ここにサイドメニュー的な何か
+        <h5>カテゴリ別</h5>
+        <hr/>
+        <ul>
+        {tagList.allMarkdownRemark.group.map((t) =>
+          <li>{t.tag}</li>
+          )}
+        </ul>
         </div>
         <div className="contents-main">
       

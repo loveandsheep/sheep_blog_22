@@ -3,7 +3,7 @@ title: PowerShellでGatsby用の記事テンプレートを作成する
 date: "2022-02-27T21:33:53+09"
 image: "noThumb.jpg"
 thumbnail: "../noThumb.jpg"
-tags: ["Software"]
+tags: ["PowerShell", "Gatsby"]
 ---
 
 Gatsbyのブログがわりと体に馴染んできて、サクッとブログを作れるようにしたかったので、テンプレから記事を作成するPowershellのスクリプトを書きました。

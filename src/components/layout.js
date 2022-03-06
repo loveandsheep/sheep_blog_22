@@ -65,15 +65,16 @@ const Layout = ({ location, title, children }) => {
         </div>
         <div className="contents-main">
           {children}
+  
+          <footer>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          </footer>
         </div>
         <div className="contents-right">
           
         </div>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
       </main>
 
     </div>

@@ -1,4 +1,5 @@
 import * as React from "react"
+import _ from 'lodash'
 import { graphql, Link, useStaticQuery } from "gatsby"
 
 const Layout = ({ location, title, children }) => {
@@ -46,27 +47,35 @@ const Layout = ({ location, title, children }) => {
       <main style={style_main}>
         <div className="contents-left">
         <header className="global-header">{header}</header>
-        <h5>カテゴリ別</h5>
+        <h5>タグ一覧</h5>
         <hr/>
         <ul>
         {tagList.allMarkdownRemark.group.map((t) =>
-          <li>{t.tag}</li>
-          )}
+        <>
+        {t.tag !== "trade" ? 
+          <li>
+          <Link to={`/tags/${_.kebabCase(t.tag)}/`}>
+          {t.tag}({t.totalCount})
+          </Link>
+        </li>:<></>
+        }
+        </>
+        )}
         </ul>
         </div>
         <div className="contents-main">
-      
           {children}
         </div>
         <div className="contents-right">
           
         </div>
+        <footer>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        </footer>
       </main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
+
     </div>
   )
 }

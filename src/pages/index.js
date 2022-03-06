@@ -27,7 +27,6 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <>
-
       <Menu />
       <Layout location={location} title={siteTitle}>
       <Seo title="むらくも" />

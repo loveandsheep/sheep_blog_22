@@ -2,7 +2,7 @@
 title: トレード 3/15(▲11728)
 date: "2022-03-15T10:12:10+09"
 image: "220315_/image.png"
-thumbnail: chart.png
+thumbnail: chart_kddi.png
 tags: ["trade"]
 ---
 

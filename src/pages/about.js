@@ -16,7 +16,8 @@ const About = ({data, location}) => {
       
       {/* <Bio /> */}
         <div>
-            日辻が開発したこと、覚えておきたい事などを書くブログです。
+          <p>日辻が開発したこと、覚えておきたい事などを書くブログです。</p>
+          <p><a href="https://twitter.com/loveandsheep145">Twitter</a></p>
         </div>
     </Layout>
     </>

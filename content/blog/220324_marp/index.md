@@ -3,7 +3,7 @@ title: Markdownでスライドが書けるMarpを使ったら良かった
 date: "2022-03-24T00:42:51+09"
 image: "220324_marp/image.png"
 thumbnail: 
-tags: ["Software", "Draft"]
+tags: ["Draft", "Software"]
 ---
 
 [Marp](https://marp.app/)というMarkdown形式でスライドが作れるツールがあって、最近使ってみてすごい良かったのでメモしてみます。

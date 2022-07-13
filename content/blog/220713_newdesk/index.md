@@ -1,7 +1,7 @@
 ﻿---
 title: EMARFとFusion360で机を作る（天板編）
 date: "2022-07-13T17:50:54+09"
-image: "220713_newdesk/image.png"
+image: "220713_newdesk/IMG_6978.jpg"
 thumbnail: "IMG_6978.jpg"
 tags: ["Hardware", "Mechatronics"]
 ---

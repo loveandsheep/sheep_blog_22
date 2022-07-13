@@ -246,8 +246,15 @@ a:focus {
 }
 
 .contents-left {
-  min-width: 15rem;
+  /* min-width: 15rem; */
   max-width: var(--maxWidth-sm);
+
+}
+
+@media screen and (max-Width: 800px) {
+  .contents-left {
+    display:none;
+  }
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -321,6 +328,10 @@ a:focus {
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
+  display:grid;
+}
+
+pre {
 }
 
 /* Media queries */

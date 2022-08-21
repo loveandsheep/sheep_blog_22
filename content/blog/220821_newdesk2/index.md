@@ -2,7 +2,7 @@
 title: EMARFとFusion360で机を作る(ケーブル収納編)
 date: "2022-08-21T19:58:36+09"
 image: "220821_newdesk2/2022-08-21-20-02-08.png"
-thumbnail: "IMG_6979.jpg"
+thumbnail: "2022-08-21-20-02-08.png"
 tags: ["Hardware", "Mechatronics", "Developed"]
 ---
 

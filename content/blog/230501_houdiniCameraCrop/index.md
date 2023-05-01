@@ -1,7 +1,7 @@
 ﻿---
 title: Houdiniのカメラクロップをピクセル単位でピッタリ指示する
 date: "2023-05-01T11:26:59+09"
-image: "230501_houdiniCameraCrop/image.png"
+image: "230501_houdiniCameraCrop/2023-05-01-14-05-55.png"
 thumbnail: 
 tags: ["Software"]
 ---
